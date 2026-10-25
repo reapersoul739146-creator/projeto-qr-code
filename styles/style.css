@@ -1,0 +1,364 @@
+/* ==============================
+RESET E CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--branco);
+
+    overflow-x: hidden;
+    position: relative;
+}
+
+.identifier {
+    color: #aaa;
+}
+
+/* ==============================
+FUNDO E EFEITOS DECORATIVOS
+============================== */
+
+.fundo-nebulosa {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at center,
+            transparent 20%,
+            rgba(0, 0, 0, 0.35) 100%);
+
+}
+
+
+/* Área onde o JavaScript criará as estrelas */
+
+.estrelas-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ==============================
+CARTÃO DO VOUCHER
+============================== */
+
+.voucher {
+    position: relative;
+    z-index: -1;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 38px 28px;
+    text-align: center;
+
+    background: rgba(8, 15, 43, 0.48);
+
+    border: 1px solid rgba(255, 215, 106, 0.4);
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.25),
+        0 0 45px rgba(128, 53, 201, 0.15),
+        inset 0 0 25px rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+}
+
+/* ==============================
+LOGO DA BARBEARIA
+============================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.logo {
+    width: 180px;
+    border-radius: 20px;
+}
+
+
+.logo {
+    display: block;
+    border-radius: 20px;
+
+    width: 150px;
+    max-width: 70%;
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 215, 106, 0.18));
+
+}
+
+
+/* ==============================
+MENSAGEM DE PREMIAÇÃO
+============================== */
+
+
+.premio h1 {
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    color: #e4a530;
+
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 12px;
+
+}
+
+.premio h2 {
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #fff;
+
+    margin-bottom: 30px;
+
+}
+
+/* ==============================
+DESTAQUE DO DESCONTO
+============================== */
+
+.desconto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px 0 32px;
+    padding: 24px 10px;
+    color: #e9a82d;
+
+    border-top: 1px solid rgba(255, 215, 106, 0.3);
+    border-bottom: 1px solid rgba(255, 215, 106, 0.3);
+
+    background:
+        radial-gradient(ellipse at center,
+            rgba(255, 215, 106, 0.09),
+            transparent 75%);
+
+}
+
+.porcentagem {
+    font-size: clamp(5rem, 20vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    background: linear-gradient(180deg,
+            #fff6cf 0%,
+            #ffd76a 35%,
+            #e9a82d 70%,
+            #fff0ae 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 205, 80, 0.25)) drop-shadow(0 0 25px rgba(255, 190, 50, 0.12));
+
+}
+
+.texto-desconto {
+    margin-top: 12px;
+
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    color: var(--dourado);
+
+}
+
+/* ==============================
+CONDIÇÕES DO VOUCHER
+============================== */
+
+.voucher-footer {
+    padding-top: 5px;
+}
+
+.condicoes {
+    max-width: 390px;
+    margin: 0 auto;
+
+    font-size: 0.92rem;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.82);
+
+}
+
+/* ==============================
+RESPONSIVIDADE PARA CELULARES
+============================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 18px 12px;
+    }
+
+
+    .voucher {
+        padding: 30px 18px;
+        border-radius: 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 25px;
+    }
+
+    .premio h1 {
+        letter-spacing: 2px;
+    }
+
+    .premio h2 {
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+
+    .desconto {
+        margin-bottom: 25px;
+        padding: 22px 5px;
+    }
+
+    .texto-desconto {
+        letter-spacing: 2px;
+    }
+
+    .condicoes {
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+}
+
+/* ==============================
+ACESSIBILIDADE
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* Estrelas douradas */
+
+.estrela {
+    position: absolute;
+    top: -30px;
+
+    color: #ffd76a;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 0 5px rgba(255, 215, 106, 0.9),
+        0 0 12px rgba(255, 190, 50, 0.7),
+        0 0 22px rgba(255, 180, 30, 0.4);
+
+    animation-name: cairEstrela;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    will-change: transform, opacity;
+
+}
+
+@keyframes cairEstrela {
+
+    0% {
+        transform: translate3d(0, -20px, 0) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+            translate3d(calc(var(--deslocamento-horizontal) * 0.5),
+                50vh,
+                0) rotate(180deg) scale(1);
+        opacity: 0.9;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform:
+            translate3d(var(--deslocamento-horizontal),
+                110vh,
+                0) rotate(360deg) scale(0.3);
+        opacity: 0;
+    }
+
+}
