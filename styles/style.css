@@ -21,7 +21,7 @@ body {
     padding: 30px 18px;
 
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--branco);
+    color: #fff;
 
     overflow-x: hidden;
     position: relative;
@@ -195,6 +195,22 @@ DESTAQUE DO DESCONTO
     font-size: clamp(5rem, 20vw, 8rem);
     font-weight: 900;
     line-height: 1;
+    letter-spacing: -4px;
+
+    background: none;
+    color: #ffd76a;
+    -webkit-text-fill-color: #ffd76a;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 205, 80, 0.25))
+        drop-shadow(0 0 25px rgba(255, 190, 50, 0.12));
+}
+
+/*
+.porcentagem {
+    font-size: clamp(5rem, 20vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
 
     letter-spacing: -4px;
 
@@ -212,6 +228,7 @@ DESTAQUE DO DESCONTO
         drop-shadow(0 0 10px rgba(255, 205, 80, 0.25)) drop-shadow(0 0 25px rgba(255, 190, 50, 0.12));
 
 }
+*/
 
 .texto-desconto {
     margin-top: 12px;
